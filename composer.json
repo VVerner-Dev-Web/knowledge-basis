@@ -1,0 +1,101 @@
+{
+
+    "name": "vverner/knowledge-basis",
+ 
+    "description": "Conhecimento VVerner",
+ 
+    "repositories": [{
+ 
+       "type": "composer",
+ 
+       "url": "https://wpackagist.org",
+ 
+       "only": [
+ 
+          "wpackagist-plugin/*"
+ 
+       ]
+ 
+    }],
+ 
+    "require": {
+ 
+       "wpackagist-plugin/user-switching": "dev-trunk",
+ 
+       "wpackagist-plugin/query-monitor" : "dev-trunk",
+ 
+       "wpackagist-plugin/woocommerce-extra-checkout-fields-for-brazil": "dev-trunk",
+ 
+       "wpackagist-plugin/contact-form-7": "dev-trunk",
+ 
+       "wpackagist-plugin/ajax-search-for-woocommerce" : "dev-trunk",
+ 
+       "wpackagist-plugin/jetpack" : "dev-trunk",
+ 
+       "wpackagist-plugin/kadence-woocommerce-email-designer" : "dev-trunk",
+ 
+       "wpackagist-plugin/loco-translate" : "dev-trunk",
+ 
+       "wpackagist-plugin/woocommerce-mercadopago" : "dev-trunk",
+ 
+       "wpackagist-plugin/nextend-facebook-connect" : "dev-trunk",
+ 
+       "wpackagist-plugin/onesignal-free-web-push-notifications" : "dev-trunk",
+ 
+       "wpackagist-plugin/seo-by-rank-math" : "dev-trunk",
+ 
+       "wpackagist-plugin/integracao-rd-station" : "dev-trunk",
+ 
+       "wpackagist-plugin/really-simple-ssl" : "dev-trunk",
+ 
+       "wpackagist-plugin/wp-smushit" : "dev-trunk",
+ 
+       "wpackagist-plugin/updraftplus" : "dev-trunk",
+ 
+       "wpackagist-plugin/woo-wallet" : "dev-trunk",
+ 
+       "wpackagist-plugin/woocommerce" : "dev-trunk",
+ 
+       "wpackagist-plugin/wp-mail-smtp" : "dev-trunk",
+ 
+       "wpackagist-plugin/wps-hide-login" : "dev-trunk",
+ 
+       "wpackagist-plugin/classic-editor" : "dev-trunk"
+ 
+    },
+ 
+    "autoload": {
+ 
+       "psr-4": {
+ 
+          "App\\": "src/"
+ 
+       }
+ 
+    },
+ 
+    "extra": {
+ 
+       "installer-paths": {
+ 
+          "../../plugins/{$name}/": [
+ 
+             "type:wordpress-plugin"
+ 
+          ]
+ 
+       }
+ 
+    },
+ 
+    "config": {
+ 
+       "allow-plugins": {
+ 
+          "composer/installers": true
+ 
+       }
+ 
+    }
+ 
+ }
