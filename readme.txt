@@ -13,7 +13,7 @@ add_filter('vv_shortcode-{SHORTCODE}', function(array $dadosParaUsoNaView){});
 add_filter('vv_taxonomy_args-{TAXONOMY}', function(array $argumentosParaRegistroDaTaxonomia){});
 
 
-// SHORTCODEs
+// SHORTCODES
 // ========================================
 $shortcodes = VVerner\Shortcodes::getInstance();
 $shortcodes->add('teste', [
