@@ -9,3 +9,9 @@ $assets->localizeJs('app', [
     'action' => VVerner\AjaxAPI::getInstance()->getGlobalAction(),
     'url'    => VVerner\AjaxAPI::getInstance()->getRequestUrl()
 ]); 
+
+
+
+
+
+
