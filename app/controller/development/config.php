@@ -7,3 +7,10 @@ $cpt->setIcon('dashicons-desktop');
 $cpt->setSupports(['title', 'thumbnail', 'excerpt' ,'content']);
 $cpt->setPublic(true);
 $cpt->register();
+
+// TAXONOMIES
+// ========================================
+$tax = new VVerner\Taxonomy('Categoria', 'Categorias', 'development-cat');
+$tax->setPostType('development');
+$tax->setPublic(false);
+$tax->register();

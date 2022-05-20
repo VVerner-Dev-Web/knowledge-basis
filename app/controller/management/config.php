@@ -7,3 +7,10 @@ $cpt->setIcon('dashicons-edit');
 $cpt->setSupports(['title', 'thumbnail', 'excerpt' ,'content']);
 $cpt->setPublic(true);
 $cpt->register();
+
+// TAXONOMIES
+// ========================================
+$tax = new VVerner\Taxonomy('Categoria', 'Categorias', 'management-cat');
+$tax->setPostType('management');
+$tax->setPublic(false);
+$tax->register();
