@@ -4,7 +4,7 @@ add_action('init', function(){
     $updates = [
         [
             'flag'   => 'required_page',
-            'version'  => 17,
+            'version'  => 2,
             'action' => 'create_required_pages'
         ]
     ];
