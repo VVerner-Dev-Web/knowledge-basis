@@ -1,4 +1,40 @@
-.button.primary{
-    color:rgb(87, 18, 165);
-    background-color: rgb(145, 14, 14);
+#text-2832122463 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+#text-2832122463>* {
+    color: rgb(255, 255, 255);
+}
+
+#section_1747333165 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgb(29, 29, 27);
+}
+
+#section_1747333165 .ux-shape-divider--top svg {
+    height: 150px;
+    --divider-top-width: 100%;
+}
+
+#section_1747333165 .ux-shape-divider--bottom svg {
+    height: 150px;
+    --divider-width: 100%;
+}
+
+#section_2038087558 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgb(29, 29, 27);
+}
+
+#section_2038087558 .ux-shape-divider--top svg {
+    height: 150px;
+    --divider-top-width: 100%;
+}
+
+#section_2038087558 .ux-shape-divider--bottom svg {
+    height: 150px;
+    --divider-width: 100%;
 }
