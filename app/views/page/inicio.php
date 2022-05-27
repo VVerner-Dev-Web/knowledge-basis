@@ -68,28 +68,3 @@
        
     </div>
 </main>
-
-<footer id="footer" class="footer-wrapper">
-
-
-    <!-- FOOTER 1 -->
-
-    <!-- FOOTER 2 -->
-
-
-
-    <div class="absolute-footer dark medium-text-center small-text-center">
-        <div class="container clearfix">
-
-
-            <div class="footer-primary pull-left">
-                <div class="copyright-footer">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <a href="#top" class="back-to-top button icon invert plain fixed bottom z-1 is-outline hide-for-medium circle"
-        id="top-link" aria-label="Go to top"><i class="icon-angle-up"></i></a>
-
-</footer>
