@@ -1,12 +1,13 @@
 <?php defined('ABSPATH') || exit('No direct script access allowed'); 
-
+$count = 1;
 if ($query->have_posts()) :?>
 
     <div id="row-1474111950"
                 class="row slider slider-recent-posts large-columns-3 medium-columns- small-columns-1 has-shadow row-box-shadow-2 "
                 data-packery-options="{&quot;itemSelector&quot;: &quot;.col&quot;, &quot;gutter&quot;: 0, &quot;presentageWidth&quot; : true}"
                 style="position: relative; height: 350.359px;">
-    <?php while ($query->have_posts()) :
+    <?php while ($query->have_posts() && $count <=6) :
+                $count++;
                 $query->the_post();?>
             <div class="col post-item" >
                 <div class="col-inner">
@@ -39,6 +40,7 @@ if ($query->have_posts()) :?>
                     </a>
                 </div>
             </div>
-        <?php endwhile;?>  
+        <?php endwhile;?>
+<?else: echo 'Nenhum post encontrado';?>  
 <?php endif;?>
 
