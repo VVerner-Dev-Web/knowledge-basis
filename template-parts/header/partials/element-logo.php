@@ -27,7 +27,7 @@ if ( ! empty( $site_logo_dark_id ) && ! is_numeric( $site_logo_dark_id ) ) {
 		<?php
 		if ( $logo_white_path ) {
 			$site_title = esc_attr( get_bloginfo( 'name', 'display' ) );
-		    echo '<img  width="200" height="90" src="' . esc_url( $logo_white_path ) . '" class="header-logo-dark" alt="'.$site_title.'"/>';
+		    echo '<img  width="200" height="90" src="' . esc_url( $logo_white_path ) . '" class="header-logo" alt="'.$site_title.'"/>';
 		} else {
 			bloginfo( 'name' );
 		}
