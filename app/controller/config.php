@@ -4,6 +4,7 @@ $assets = VVerner\Assets::getInstance();
 $assets->registerCss('main');
 
 $assets->registerJs('app'); 
+$assets->registerJs('script'); 
 $assets->localizeJs('app', [
     'sec'    => VVerner\AjaxAPI::getInstance()->getGlobalNonce(),
     'action' => VVerner\AjaxAPI::getInstance()->getGlobalAction(),

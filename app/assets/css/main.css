@@ -17,7 +17,7 @@
 #section_1747333165 {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: rgb(29, 29, 27);
+    /* background-color: rgb(29, 29, 27); */
 }
 
 #section_1747333165 .ux-shape-divider--top svg {
@@ -33,7 +33,7 @@
 #section_2038087558 {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: rgb(29, 29, 27);
+    /* background-color: rgb(29, 29, 27); */
 }
 
 #section_2038087558 .ux-shape-divider--top svg {
@@ -125,4 +125,14 @@ input:checked+.darktheme-selector:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
+}
+
+body .section,
+body .box{
+    background: blue !important;
+}
+
+body.darktheme section,
+body.darktheme .box{
+    background: red !important;
 }
