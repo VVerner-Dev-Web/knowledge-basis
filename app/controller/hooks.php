@@ -14,4 +14,15 @@ add_filter('vv_shortcode-slider-recent-posts',function($args){
     $args['query'] = $query;
 
     return $args;
+
 });
+
+function BlogList($postType){
+
+    $query = new WP_Query([
+        'post_type' => $postType
+    ]);
+
+    return $query;
+};
+
