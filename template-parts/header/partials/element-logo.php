@@ -25,10 +25,9 @@ if ( ! empty( $site_logo_dark_id ) && ! is_numeric( $site_logo_dark_id ) ) {
 <!-- Header logo -->
 <a href="<?php echo esc_url( $logo_link ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?><?php echo get_bloginfo( 'name' ) && get_bloginfo( 'description' ) ? ' - ' : ''; ?><?php bloginfo( 'description' ); ?>" rel="home">
 		<?php
-		if ( $logo_path ) {
+		if ( $logo_white_path ) {
 			$site_title = esc_attr( get_bloginfo( 'name', 'display' ) );
-			if ( $logo_path) echo '<img  width="200" height="90" src="' . esc_url($logo_white_path ) . '" class="header-logo-dark" alt="'.$site_title.'"/>';
-			else echo '<img  width="200" height="90" src="' . esc_url( $logo_path ) . '" class="header-logo-dark" alt="'.$site_title.'"/>';
+		    echo '<img  width="200" height="90" src="' . esc_url( $logo_white_path ) . '" class="header-logo-dark" alt="'.$site_title.'"/>';
 		} else {
 			bloginfo( 'name' );
 		}
