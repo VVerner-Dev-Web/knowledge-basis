@@ -4,7 +4,7 @@ add_action('init', function(){
     $updates = [
         [
             'flag'   => 'required_page',
-            'version'  => 17,
+            'version'  => 18,
             'action' => 'create_required_pages'
         ]
     ];
@@ -22,9 +22,7 @@ add_action('init', function(){
 add_action('kb/upgrade/create_required_pages',function(string $flag, int $version, int $oldVersion){
     global $wpdb;
     $pages = [
-        '1' => ['Início'],
-        '2' => ['login'],
-        '3' => ['Cenoura']
+        '1' => ['Início']
     ];
     
     foreach ($pages as $page) :
