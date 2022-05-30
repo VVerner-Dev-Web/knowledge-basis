@@ -160,3 +160,24 @@ body.darktheme h6 {
 #wpadminbar * {
     color: #c4c5c7 !important;
 } 
+
+
+/* TESTE */
+.search-hero-form .field .control .input {
+    height: 60px;
+    padding-left: 66px;
+}
+
+.bg-polka{
+    background-color: #f2f2f2;
+    opacity: 1;
+    background-image: radial-gradient(#b700ff 0.9500000000000001px, #f2f2f2 0.9500000000000001px);
+    background-size: 19px 19px;
+}
+
+.darktheme .bg-polka{
+    background-color: rgb(29, 29, 27);
+    opacity: 1;
+    background-image: radial-gradient(#b700ff 0.9500000000000001px, rgb(29, 29, 27) 0.9500000000000001px);
+    background-size: 19px 19px;
+}

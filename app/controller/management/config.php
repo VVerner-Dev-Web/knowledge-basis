@@ -4,7 +4,7 @@
 // ========================================
 $cpt = new VVerner\PostType('Gerenciamento', 'Gerenciamento', 'management');
 $cpt->setIcon('dashicons-edit');
-$cpt->setSupports(['title', 'thumbnail', 'excerpt' ,'editor']);
+$cpt->setSupports(['title', 'thumbnail', 'excerpt' ,'editor', 'comments']);
 $cpt->setPublic(true);
 $cpt->register();
 
