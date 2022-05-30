@@ -7225,7 +7225,7 @@ print {
 }
 
 .navbar {
-    background-color: var(--white);
+    background-color: var(--html-bg-color);
     min-height: 3.25rem;
     position: relative;
     z-index: 30
@@ -8104,7 +8104,7 @@ a.navbar-item.is-active,
 .navbar-link:focus-within,
 .navbar-link:hover,
 .navbar-link.is-active {
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
     color: var(--link)
 }
 
@@ -8117,7 +8117,7 @@ a.navbar-item.is-active,
 }
 
 .navbar-item img {
-    max-height: 1.75rem
+    max-height: 2.75rem
 }
 
 .navbar-item.has-dropdown {
@@ -28242,11 +28242,15 @@ hr.is-inverted {
 }
 
 .navbar {
-    background: transparent;
+    background: var(--html-bg-color);
     min-height: 70px;
     z-index: 40;
     -webkit-transition: all .3s;
     transition: all .3s
+}
+
+.is-black.navbar{
+    background: var(--night-dark-4) !important;
 }
 
 .navbar.is-mobile {
@@ -28255,7 +28259,7 @@ hr.is-inverted {
 }
 
 .navbar.is-scrolled {
-    background: var(--navbar-bg-color);
+    background: var(--html-bg-color);
     -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08);
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08)
 }
@@ -28327,7 +28331,7 @@ hr.is-inverted {
 
     .navbar .navbar-menu.is-active {
         text-align: center;
-        background: var(--navbar-bg-color)
+        background: var(--html-bg-color)
     }
 
     .navbar .navbar-menu.is-active .navbar-item.is-mobile-centered {

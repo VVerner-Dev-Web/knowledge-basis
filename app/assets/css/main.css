@@ -36,9 +36,20 @@
     height: 150px;
     --divider-width: 100%;
 }
-
+/*LOGO*/
+#site-logo{
+    content: url('../img/logotipo.png');
+}
+.is-dark #site-logo{
+    content: url('../img/logotipo-all-white.png');
+}
+/*Menu mobile*/
+.container{
+    padding-left: 0 ;
+    padding-right: 0;
+}
 /* Dark Theme Toggle */
-.darktheme-toggle-container::before {
+/* .darktheme-toggle-container::before {
     content: "\f186";
     left: .3em;
     color: #f1c40f;
@@ -71,11 +82,11 @@
 }
 
 /* Hide default HTML checkbox */
-.darktheme-toggle-container input {
+/*.darktheme-toggle-container input {
     opacity: 0;
     width: 0;
     height: 0;
-}
+} */
 
 /* The darktheme-selector */
 /* .darktheme-selector {
