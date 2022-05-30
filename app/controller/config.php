@@ -2,9 +2,10 @@
 
 $assets = VVerner\Assets::getInstance();
 $assets->registerCss('main');
+$assets->registerCss('faqster');
 
 $assets->registerJs('app'); 
-$assets->registerJs('script'); 
+$assets->registerJs('faqster'); 
 $assets->localizeJs('app', [
     'sec'    => VVerner\AjaxAPI::getInstance()->getGlobalNonce(),
     'action' => VVerner\AjaxAPI::getInstance()->getGlobalAction(),

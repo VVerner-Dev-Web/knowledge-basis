@@ -78,7 +78,7 @@
 }
 
 /* The darktheme-selector */
-.darktheme-selector {
+/* .darktheme-selector {
     position: absolute !important;
     cursor: pointer;
     top: 0;
@@ -110,42 +110,30 @@ input:checked+.darktheme-selector {
 
 input:focus+.darktheme-selector {
     box-shadow: 0 0 1px #333;
-}
+} */
 
-input:checked+.darktheme-selector:before {
+/* input:checked+.darktheme-selector:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-}
+} */
 
-body,
+/* body,
 body .section,
 body .box {
     background: #f2f2f2 !important;
     transition: all .2s ease;
-}
+} */
 
-body.darktheme,
+/* body.darktheme,
 body.darktheme section,
 body.darktheme .box {
     background: rgb(29, 29, 27) !important;
     transition: all .2s ease;
-}
+} */
 
-body,
-body p,
-body span,
-body strong,
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
-    color: rgb(29, 29, 27) !important;
-}
 
-body.darktheme,
+/* body.darktheme,
 body.darktheme p,
 body.darktheme span,
 body.darktheme strong,
@@ -156,7 +144,7 @@ body.darktheme h4,
 body.darktheme h5,
 body.darktheme h6 {
     color: #f2f2f2 !important;
-}
+} */
 
 #wpadminbar * {
     color: #c4c5c7 !important;
