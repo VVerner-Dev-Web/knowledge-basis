@@ -143,7 +143,7 @@ body.is-dark .box {
     transition: all .2s ease;
 } */
 
-body,
+/* body,
 body p,
 body span,
 body strong,
@@ -167,7 +167,7 @@ body.is-dark h4,
 body.is-dark h5,
 body.is-dark h6 {
     color: #f2f2f2 !important;
-}
+}*/
 
 #wpadminbar * {
     color: #c4c5c7 !important;
