@@ -17,7 +17,7 @@
           <div class="field">
             <div class="control has-icon">
               <input x-on:keyup="searchData($event)" id="search" type="text" class="input is-rounded"
-                placeholder="Pesquisar por conteúdo...">
+                placeholder="Pesquisar por conteúdo">
               <div class="form-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                   role="img" class="iconify iconify--feather" width="1em" height="1em"
@@ -195,7 +195,7 @@
       </div>
     </div>
  </div>
-<!-- Conteúdos Populares -->
+<!-- Conteúdos Recentes -->
   <div class="section">
     <div class="container">
       <div class="mx-auto max-w-9 pb-6">
@@ -206,10 +206,10 @@
 
         <div class="columns is-multiline">
 
-          <?php $topics = recentPosts(); 
-                if ($topics->have_posts()) : 
-                    while ($topics->have_posts()) :
-                        $topics->the_post();
+          <?php $recentPosts = getRecentPosts(); 
+                if ($recentPosts->have_posts()) : 
+                    while ($recentPosts->have_posts()) :
+                        $recentPosts->the_post();
                         VVerner\Views::getInstance()->getComponent('recent-post'); ?>
                     <?php endwhile;?>
                 <?php endif;?>
@@ -217,19 +217,42 @@
       </div>
     </div>
   </div>
-<!-- Perguntas Populares -->
+<!-- Conteúdos Populares -->
   <div class="section is-grey">
     <div class="container">
       <div class="py-6 has-text-centered">
-        <h2 class="title is-3 is-bold">Perguntas populares</h2>
-        <h3 class="subtitle is-5">Peça ajuda às pessoas dentro da comunidade</h3>
+        <h2 class="title is-3 is-bold">Conteúdos Populares</h2>
+        <h3 class="subtitle is-5">Veja os conteúdos mais acessados</h3>
       </div>
     </div>
   </div>
 <!-- Slider com as perguntas -->
-
+<div class="glider-wrap ">
+    <div class="questions-glider  glider draggable">
+      
+        <?php $popularPosts = getMostViewedPosts(); 
+                if ($popularPosts->have_posts()) : ?>
+                    <?php if($popularPosts->post_count >= 4) : ?>
+                        <div class="glider-track slider-popular-posts"> 
+                        <?php while ($popularPosts->have_posts()) :
+                            $popularPosts->the_post();
+                            VVerner\Views::getInstance()->getComponent('popular-posts'); ?>
+                        <?php endwhile;?>
+                    <?php else: ?>
+                        <div class="glider-track row row-full-width align-center"> 
+                        <?php while ($popularPosts->have_posts()) :
+                            $popularPosts->the_post();
+                            VVerner\Views::getInstance()->getComponent('popular-posts'); ?>
+                        <?php endwhile;?>
+                    <?php endif;?>
+                <?php else :
+                        echo 'Nenhum Conteúdo vizualizado.';
+                endif;?>          
+      </div>
+    </div>
+</div>
 <!-- Estatísticas -->
-<div class="section is-grey">
+<div class=" block section is-grey">
     <div class="container">
       <div class="app-stats">
         <h2 class="title is-3 is-bold has-text-centered">
@@ -244,7 +267,7 @@
                 d="M128 28a100 100 0 0 0-86.9 149.5l-9 31.6a12 12 0 0 0 14.8 14.8l31.6-9A100 100 0 1 0 128 28Zm0 192a91.3 91.3 0 0 1-47-12.9a4.6 4.6 0 0 0-2-.5h-1.1l-33.2 9.5a4 4 0 0 1-4.9-4.9l9.5-33.2a4.1 4.1 0 0 0-.4-3.1A92 92 0 1 1 128 220Zm50.8-110.8a3.9 3.9 0 0 1 0 5.6l-32 32a3.9 3.9 0 0 1-5.6 0L112 117.7l-29.2 29.1a4 4 0 0 1-5.6-5.6l32-32a3.9 3.9 0 0 1 5.6 0l29.2 29.1l29.2-29.1a3.9 3.9 0 0 1 5.6 0Z">
               </path>
             </svg>
-            <div class="big-number"><?php echo TotalPosts();?></div>
+            <div class="big-number"><?php echo getTotalPostsCount();?></div>
             <p>Tópicos criados desde o lançamento</p>
           </div>
 
