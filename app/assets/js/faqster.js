@@ -3585,68 +3585,13 @@
       };
     }
     
-    },{}],5:[function(require,module,exports){
-    "use strict";
-    
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.initGlider = initGlider;
-    
-    function initGlider() {
-      return {
-        setupGlider: function setupGlider() {
-          var glider = new Glider(document.querySelector('.questions-glider'), {
-            slidesToShow: 3.8,
-            slidesToScroll: 2,
-            draggable: true,
-            responsive: [{
-              // screens greater than >= 350px
-              breakpoint: 350,
-              settings: {
-                slidesToShow: 1.2,
-                slidesToScroll: 2,
-                //itemWidth: 150,
-                duration: 0.25
-              }
-            }, {
-              // screens greater than >= 768px
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2.4,
-                slidesToScroll: 2,
-                //itemWidth: 150,
-                duration: 0.25
-              }
-            }, {
-              // screens greater than >= 1024px
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3.2,
-                slidesToScroll: 2
-              }
-            }, {
-              // screens greater than >= 1024px
-              breakpoint: 1250,
-              settings: {
-                slidesToShow: 3.8,
-                slidesToScroll: 2
-              }
-            }]
-          });
-        }
-      };
-    }
-    
     },{}],6:[function(require,module,exports){
     "use strict";
     
     var _theme = require("./theme/theme");
     
     var _navbar = require("./navbar/navbar");
-    
-    var _glider = require("./glider/glider");
-    
+        
     var _searchInput = require("./search/search-input");
     
     var _accordion = require("./accordion/accordion");
@@ -3654,10 +3599,9 @@
     window.initTheme = _theme.initTheme;
     window.initNavbar = _navbar.initNavbar;
     window.initSearchInput = _searchInput.initSearchInput;
-    window.initGlider = _glider.initGlider;
     window.initAccordion = _accordion.initAccordion;
     
-    },{"./accordion/accordion":4,"./glider/glider":5,"./navbar/navbar":7,"./search/search-input":8,"./theme/theme":10}],7:[function(require,module,exports){
+    },{"./accordion/accordion":4,"./navbar/navbar":7,"./search/search-input":8,"./theme/theme":10}],7:[function(require,module,exports){
     "use strict";
     
     Object.defineProperty(exports, "__esModule", {

@@ -43,11 +43,28 @@
 .is-dark #site-logo{
     content: url('../img/logotipo-all-white.png');
 }
-/*Menu mobile*/
-.container{
-    padding-left: 0 ;
-    padding-right: 0;
+
+/*HOME*/
+.form-button{
+    padding: 4px 6px 1px 6px;
+    
 }
+
+/*MOBILE*/
+@media(max-width:48em){
+    .navbar .container{
+        padding-left: 0 ;
+        padding-right: 0;
+    }
+    .question-glider-item{
+        margin-bottom: 15px;
+    }
+
+    .search-hero-form .field .control .input {
+       padding-left: 60px !important;
+    }
+}
+
 /* Dark Theme Toggle */
 /* .is-dark-toggle-container::before {
     content: "\f186";
@@ -143,7 +160,7 @@ body.is-dark .box {
     transition: all .2s ease;
 } */
 
-body,
+/* body,
 body p,
 body span,
 body strong,
@@ -167,7 +184,7 @@ body.is-dark h4,
 body.is-dark h5,
 body.is-dark h6 {
     color: #f2f2f2 !important;
-}
+}*/
 
 #wpadminbar * {
     color: #c4c5c7 !important;
@@ -195,3 +212,4 @@ body.is-dark h6 {
    transition: all .2s ease;
     background-size: 19px 19px;
 }
+
