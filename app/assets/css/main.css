@@ -49,20 +49,20 @@
     padding-right: 0;
 }
 /* Dark Theme Toggle */
-/* .darktheme-toggle-container::before {
+/* .is-dark-toggle-container::before {
     content: "\f186";
     left: .3em;
     color: #f1c40f;
 }
 
-.darktheme-toggle-container::after {
+.is-dark-toggle-container::after {
     content: "\f185";
     right: 0.3em;
     color: #f39c12;
 }
 
-.darktheme-toggle-container::before,
-.darktheme-toggle-container::after {
+.is-dark-toggle-container::before,
+.is-dark-toggle-container::after {
     font-family: "Font Awesome 5 Free";
     font-size: 1.1rem;
     position: absolute;
@@ -74,7 +74,7 @@
     background-position: center center;
 }
 
-.darktheme-toggle-container {
+.is-dark-toggle-container {
     position: relative;
     display: inline-block;
     width: 60px;
@@ -82,14 +82,14 @@
 }
 
 /* Hide default HTML checkbox */
-/*.darktheme-toggle-container input {
+/*.is-dark-toggle-container input {
     opacity: 0;
     width: 0;
     height: 0;
 } */
 
-/* The darktheme-selector */
-/* .darktheme-selector {
+/* The is-dark-selector */
+/* .is-dark-selector {
     position: absolute !important;
     cursor: pointer;
     top: 0;
@@ -101,7 +101,7 @@
     transition: .4s;
 }
 
-.darktheme-selector:before {
+.is-dark-selector:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -115,15 +115,15 @@
     z-index: 2;
 }
 
-input:checked+.darktheme-selector {
+input:checked+.is-dark-selector {
     background-color: #333;
 }
 
-input:focus+.darktheme-selector {
+input:focus+.is-dark-selector {
     box-shadow: 0 0 1px #333;
 } */
 
-/* input:checked+.darktheme-selector:before {
+/* input:checked+.is-dark-selector:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
@@ -136,26 +136,38 @@ body .box {
     transition: all .2s ease;
 } */
 
-/* body.darktheme,
-body.darktheme section,
-body.darktheme .box {
+/* body.is-dark,
+body.is-dark section,
+body.is-dark .box {
     background: rgb(29, 29, 27) !important;
     transition: all .2s ease;
 } */
 
+body,
+body p,
+body span,
+body strong,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+    color: #283252 !important;
+}
 
-/* body.darktheme,
-body.darktheme p,
-body.darktheme span,
-body.darktheme strong,
-body.darktheme h1,
-body.darktheme h2,
-body.darktheme h3,
-body.darktheme h4,
-body.darktheme h5,
-body.darktheme h6 {
+body.is-dark,
+body.is-dark p,
+body.is-dark span,
+body.is-dark strong,
+body.is-dark h1,
+body.is-dark h2,
+body.is-dark h3,
+body.is-dark h4,
+body.is-dark h5,
+body.is-dark h6 {
     color: #f2f2f2 !important;
-} */
+}
 
 #wpadminbar * {
     color: #c4c5c7 !important;
@@ -169,15 +181,17 @@ body.darktheme h6 {
 }
 
 .bg-polka{
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     opacity: 1;
-    background-image: radial-gradient(#b700ff 0.9500000000000001px, #f2f2f2 0.9500000000000001px);
+    background-image: radial-gradient(#b700ff 0.9500000000000001px, #ffffff 0.9500000000000001px);
+   transition: all .2s ease;
     background-size: 19px 19px;
 }
 
-.darktheme .bg-polka{
-    background-color: rgb(29, 29, 27);
+.is-dark .bg-polka{
+    background-color: #0f0f1f;
     opacity: 1;
-    background-image: radial-gradient(#b700ff 0.9500000000000001px, rgb(29, 29, 27) 0.9500000000000001px);
+    background-image: radial-gradient(#b700ff 0.9500000000000001px, #0f0f1f 0.9500000000000001px);
+   transition: all .2s ease;
     background-size: 19px 19px;
 }

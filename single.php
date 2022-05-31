@@ -17,37 +17,39 @@
                             <style>
                                 #text-2779727159 {
                                     text-align: center;
-                                    background: #f2f2f2;
+                                    background: #ffffff;
                                     width: fit-content;
-                                    padding: 0 10px 0 10px;                                   
+                                    padding: 0 10px 0 10px;    
+                                                                 
                                 }
-                                .darktheme #text-2779727159 {
+                                .is-dark #text-2779727159 {
                                     text-align: center;
-                                    background: rgb(29, 29, 27);
+                                    background: #0f0f1f;
+                                    
                                 }
 
                             </style>
                         </div>
                         <div id="text-1438923554" class="text">
-                            <h1>Título do post</h1>
+                            <h1><?php the_title()?></h1>
                             <style>
                                 #text-1438923554 {
                                     font-size: 2.6rem;
-                                    text-align: center;
-                                    color: rgb(255, 255, 255);
-                                    background: #f2f2f2;
+                                    text-align: center;                                    
+                                    background: #ffffff;
                                     width: fit-content;
                                     padding: 0 10px 0 10px;
+                                                                   
+
                                 }
-                                .darktheme #text-1438923554 {
+                                .is-dark #text-1438923554 {
                                     font-size: 2.6rem;
                                     text-align: center;
-                                    color: rgb(255, 255, 255);
-                                    background:rgb(29, 29, 27)
+                                    
+                                    background:#0f0f1f;
+                                                                      
                                 }
-                                #text-1438923554>* {
-                                    color: rgb(255, 255, 255);
-                                }
+                                
                             </style>
                         </div>
                         <div id="text-2794560758" class="text">
@@ -55,14 +57,17 @@
                             <style>
                                 #text-2794560758 {
                                     text-align: center;
-                                    background: #f2f2f2;
+                                    background: #ffffff;
                                     width: fit-content;
                                     padding: 0 10px 0 10px;
+                                                                 
+
                                 }
 
-                                .darktheme #text-2794560758 {
+                                .is-dark #text-2794560758 {
                                     text-align: center;
-                                    background: rgb(29, 29, 27);
+                                    background: #0f0f1f;
+                                   
                                 }
                             </style>
                         </div>
@@ -177,17 +182,10 @@
         'post_id' => get_the_ID()
     ]);
      if ( $current_post_comments ) : ?>
-		<h3 class="comments-title uppercase">
-			<?php
-				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'flatsome' ) ),
-					number_format_i18n( get_comments_number() ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			?>
-		</h3>
+		
 
-		<ol class="comment-list">
+        <div class=".glider-wrap">
+		<ol class="comment-list questions-glider">
 			<?php foreach($current_post_comments as $comment) : ?>
 				<a class="question-glider-item" data-gslide="0" style=" ">
           <div class="header">
@@ -205,13 +203,14 @@
             <div class="stat">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--feather" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" data-icon="feather:message-circle"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 11.5a8.38 8.38 0 0 1-.9 3.8a8.5 8.5 0 0 1-7.6 4.7a8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8a8.5 8.5 0 0 1 4.7-7.6a8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
               <span>7</span>
-            </div>
+              </div>
           </div>
           <span class="tag is-curved category">Subscription</span>
         </a>
                 
             <?php endforeach;?>
 		</ol>
+        </div>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
