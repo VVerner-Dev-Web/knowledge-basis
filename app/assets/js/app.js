@@ -12,17 +12,23 @@
         prevNextButtons: false,
         cellAlign : 'right'
     })
+
+    $('.like').on('click', function() {
+        const $button = $(this);
+        const data    = {
+            action: 'kb/comment/insert-like',
+            _wpnonce: app_data.cnonce,
+            comment_id: $button.data('id')
+        } 
+
+        $.post(app_data.url, data, function(response){
+            if(response.success){
+                $('.likes-'+$button.data('id')).text(response.data)
+            }
+        })
+    });
 })( jQuery );
 
-$(function() {
-    $('.like').on('click', function() {
-    $(this).next('.likes').find('span').text(function() {
-    if (parseInt($(this).text()) === 0) {
-    return parseInt($(this).text() + 1);
-    }
-    else {
-    return 0;
-    }
-    });
-    });
-    });
+
+   
+ 

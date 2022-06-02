@@ -209,29 +209,26 @@
                                 <p><?= $comment->comment_content?></p>
                             </div>
                             <div class="stats">
-                                <div class="stat">
-
-
-                                
-                                    <button class="like">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                <div class="stat">                                
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
-                                            class="iconify iconify--feather" width="1em" height="1em"
+                                            data-id='<?= $comment->comment_ID ?>'
+                                            class="like iconify iconify--feather" width="1em" height="1em"
                                             preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"
-                                            data-icon="feather:thumbs-up">
+                                            data-icon="feather:thumbs-up" style="cursor: pointer;">
                                             <path fill="none" stroke="currentColor" stroke-linecap="round"
                                                 stroke-linejoin="round" stroke-width="2"
                                                 d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
                                             </path>
                                         </svg>
-                                    </button>
-                                    <span class="likes"><span>0</span></span>
+                                    
+                                    <span class="likes likes-<?= $comment->comment_ID?>"><?= get_comment_meta($comment->comment_ID, 'likes', true)?></span>
                                 </div>
                                 <div class="stat">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        aria-hidden="true" role="img" class="iconify iconify--feather" width="1em"
+                                        aria-hidden="true" role="img" data-id='<?= $comment->comment_ID ?>' class="iconify iconify--feather" width="1em"
                                         height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"
-                                        data-icon="feather:message-circle">
+                                        data-icon="feather:message-circle" style="cursor: pointer;">
                                         <path fill="none" stroke="currentColor" stroke-linecap="round"
                                             stroke-linejoin="round" stroke-width="2"
                                             d="M21 11.5a8.38 8.38 0 0 1-.9 3.8a8.5 8.5 0 0 1-7.6 4.7a8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8a8.5 8.5 0 0 1 4.7-7.6a8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">

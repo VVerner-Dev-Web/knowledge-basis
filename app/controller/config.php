@@ -6,10 +6,9 @@ $assets->registerCss('faqster');
 
 $assets->registerJs('app'); 
 $assets->registerJs('faqster'); 
-$assets->localizeJs('app', [
-    'sec'    => VVerner\AjaxAPI::getInstance()->getGlobalNonce(),
-    'action' => VVerner\AjaxAPI::getInstance()->getGlobalAction(),
-    'url'    => VVerner\AjaxAPI::getInstance()->getRequestUrl()
+$assets->localizeJs('app', [    
+    'url'    => VVerner\AjaxAPI::getInstance()->getRequestUrl(),
+    'cnonce' => wp_create_nonce('kb/comment/insert-like')
 ]); 
 
 
